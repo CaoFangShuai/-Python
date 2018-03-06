@@ -1,6 +1,6 @@
 from random import randint
 
-print("Guess what I think number?")
+print("Guess what I think?")
 num=randint(1,100)
 
 Offon=False
@@ -11,7 +11,10 @@ while Offon==False:
         
     if name<num:
         print("too small")
+        
     if name==num:
         print("very good")
         Offon=True
     
+    
+
