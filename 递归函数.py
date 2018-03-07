@@ -20,4 +20,4 @@ def trim(str):
 	else:
 		str=str
 	return str	
-print(trim("saddasd"))			
+print(trim("saddasd"))	
