@@ -4,14 +4,76 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
+<style>
+	div{
+		width: 400px;
+	
+		height: 400px;
+		border: 10px solid #ccc;
+		background-color: pink;
+	}
+
+	span{
+		background-color: blue;
+	}
+</style>
 <body>
-	  <div  style='z-index:2;position:relative; width: 700px;  height: 415px;background-image: url(http://122.114.251.98:8080/bantu/images/bg/bgcard5.png); background-position: center;background-size: 700px 415px;border-radius: 20px;'>
-    <div style='height:60px;background-color:#273d54;position:absolute;top:110px;line-height:60px;padding:0 20px;'>
-       <div style='color:#fff;font-size:1.1rem;float:left;max-width:248px;overflow:hidden;'>{{inputValue0}}{{item.mycard_name}}{{mycard_name}}</div>
-      <div style='color:#fff;font-size:0.75rem;float:left;padding-left:20px;margin-top:6px;'>{{inputValue1}}{{item.mycard_position}}{{mycard_position}}</div> 
-    </div>
-      <div style='width:600px;height:60px;padding-left:28px;line-height:60px;position:absolute;top:222px;color:#263D54;font-weight:700;overflow:hidden;'>{{inputValue3}}{{item.mycard_companyname}}{{mycard_companyname}}</div>
-      <div catchtap="phone" data-phone="{{item.mycard_mobile}}" style='width:500px;height:72px;line-height:72px;color:#fff;position:absolute;bottom:64px;left:64px;letter-spacing:5px;font-size:0.8rem;overflow:hidden;'>{{inputValue2}}{{item.mycard_mobile}}{{mycard_mobile}}</div>
-  </div>
+	<input type="text" name="" value="">
+	<input type="text" name="">
+	<input type="button" name="" value="查找">
+	<div>
+		长空之下浓烟滚滚，一片孤城矗立于荒野之中。原本坚实的城墙早已在连日战火的摧残之下破败不堪，苦守城头之上的梁军士卒也同样伤痕累累，筋疲力尽，然而大梁长林军的战旗依然迎着烈烈北风，屹立不倒。大梁朝长林王府世子萧平章，凝视着城下敌人浩大的军势，满面愁容。他统帅着这支残兵已在北境前线苦守孤城甘州多日，形势危急，便是身为统帅的他也如士卒一般遍体鳞伤，止不住的低声咳嗽。副帅东青向他禀告左右后方均无援军的迹象，而补给也已经断绝了数十天，身为萧平章的亲卫，他恳求萧平章作为王府世子立刻撤离甘州，然而萧平章坚定的说道，长林军旗之下，岂能畏战而逃，即使真的城破身死，好在长林王膝下还有次子萧平旌。提起他这个弟弟，萧平章不由回想起是三个月前他在琅琊阁上时最后见到弟弟的情景。
+	</div>
+	<div>
+		
+	</div>
+	<script >
+		var ainp=document.getElementsByTagName("input")
+		var odiv=document.getElementsByTagName("div")
+		ainp[2].onclick=function(){
+			var str=ainp[0].value;
+			var newstr=ainp[1].value
+			if (!str) return
+			odiv[0].innerHTML=odiv[0].innerHTML.split(str).join('<span>'+newstr+'</span>')
+		}
+		
+		var str=""
+		for(i=0;i<=10000;i++){
+			str+=String.fromCharCode(i)+"";
+
+		}
+		// odiv[1].innerHTML=str 
+
+	</script>
+	<script>
+		var data=""
+		for(var attr in window){
+			data+=attr+":"+window[attr]+"<br />"
+		}
+		document.body.innerHTML=data
+		// 数组去重
+		var arr=[1,2,3,3,3,4,5,6,7]
+		for(var i=0;i<arr.length;i++){
+			for(var j=i+1;j<arr.length;j++){
+				if(arr[i]==arr[j]){
+					arr.splice(arr[i],i)
+					j--
+				}
+			}
+		}
+		alert(arr)
+		arr=[];			
+		for(var i=0;i<20;i++){
+			
+			num=Math.round(Math.random()*21)
+			
+			if(arr[i] !=num){
+				arr.push(num)
+			}
+		}
+		console.log(arr.sort(function(a,b){
+			return a-b
+		}))
+	</script>
 </body>
 </html>
