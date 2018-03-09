@@ -45,4 +45,14 @@ print(print_score(bart1))
 '''
 但是，既然Student实例本身就拥有这些数据，要访问这些数据，就没有必要从外面的函数去访问，可以直接在Student类的内部定义访问数据的函数，这样，就把“数据”给封装起来了。
 
-这些封装数据的函数是和Student类本身是关联起来的，我们称之为类的方法：'''
+这些封装数据的函数是和Student类本身是关联起来的，我们称之为类的方法：
+'''
+
+class Student(object):
+    
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+    def print_score(self):
+        print('%s: %s' % (self.name, self.score))
