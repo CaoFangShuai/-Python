@@ -34,14 +34,14 @@ a = list()  # a是list类型
 b = Animal()  # b是Animal类型
 c = Dog()  # c是Dog类型
 # 判断一个变量是否是某个类型可以用isinstance()判断
-print isinstance(a,list)#True
-print isinstance(b,Animal)#True
-print isinstance(c,list)#False
-print isinstance(c,Dog)#True
+print(isinstance(a,list))#True
+print(isinstance(b,Animal))#True
+print (isinstance(c,list))#False
+print (isinstance(c,Dog))#True
 # 看来a、b、c确实对应着list、Animal、Dog这3种类型。
 
 # 但是等等，试试：
-print isinstance(c,Animal)#True
+print(isinstance(c,Animal))#True
 '''看来c不仅仅是Dog，c还是Animal！
 
 不过仔细想想，这是有道理的，因为Dog是从Animal继承下来的，当我们创建了一个Dog的实例c时，
@@ -50,7 +50,7 @@ print isinstance(c,Animal)#True
 
 所以，在继承关系中，如果一个实例的数据类型是某个子类，那它的数据类型也可以被看做是父类。但是，反过来就不行：'''
 d=Animal()
-print isinstance(d,Cat)#False
+print (isinstance(d,Cat))#False
 '''Dog可以看成Animal，但Animal不可以看成Dog。
 
 要理解多态的好处，我们还需要再编写一个函数，这个函数接受一个Animal类型的变量：'''
