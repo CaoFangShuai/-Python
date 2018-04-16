@@ -16,6 +16,7 @@ from types import MethodType
 s.set_age = MethodType(set_age, s) #给实例绑定一个方法
 s.set_age(25) # 调用实例方法
 print(s.age) 
+<<<<<<< HEAD
 #递归函数
 def fetch(n):
     if n==1:
@@ -132,3 +133,6 @@ print(normalize(['adam', 'LISA', 'barT']))
             
 
     
+=======
+#print('lkndal')
+>>>>>>> 4aebeec586805d0f66a25bfd6b748f492a730a16
