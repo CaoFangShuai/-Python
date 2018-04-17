@@ -128,7 +128,32 @@ def normalize(name):
         return str.capitalize()
     return list(map(capital, name))
 print(normalize(['adam', 'LISA', 'barT']))
-    
-            
+#Python提供的sum()函数可以接受一个list并求和，请编写一个prod()函数，可以接受一个list并利用reduce()求积
+from functools import reduce
+def prod(L4):
+    def redu(x,y):
+        return x*y
+    return reduce(redu,L4)
+print(prod([1,5,6]))
+#利用map和reduce编写一个str2float函数，把字符串'123.456'转换成浮点数123.456：
+def str2float(s):
+    a=int(s.split('.')[0])#整数部分
+    b=int(s.split('.')[1])*pow(10,-len(s.split('.')[1]))#小数部分
+    return a+b
+print(list(map(str2float,['124.415','45.25'])))
+print(list(map(lambda s : int(s.split('.')[0]) + int(s.split('.')[1]) * pow(10,-len(s.split('.')[1])),['123.456','345.234'])))    
+          
+#回数是指从左向右读和从右向左读都是一样的数，例如12321，909。请利用filter()筛选出回数：
+def is_palindrome(n):
+    n=str(n)  
+    if len(n) % 2==0:
+        return False
+    else:
+        m=1
+        while int((len(n)-1)/2)>=m:
+            if n[0:m]==n[-1:-(m+1)]:
+                m=m+1
+                return n
 
-    
+print(list(filter(is_palindrome,[123,5454,45654])))
+
