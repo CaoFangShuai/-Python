@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+# @Author: Administrator
+# @Date:   2018-04-18 14:26:24
+# @Last Modified by:   Administrator
+# @Last Modified time: 2018-04-25 13:04:01
+# -*- coding: utf-8 -*-
 
 class Screen(object):
     @property
