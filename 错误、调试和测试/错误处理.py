@@ -33,3 +33,22 @@ def main():
     finally:
         print('finally...')
 main()
+import logging
+def foo1(s):
+    return 10 / int(s)
+
+def bar1(s):
+    return foo1(s) * 2
+
+def main1():
+    try:
+        
+        bar1('0')
+    except Exception as e:
+        logging.exception(e)
+        
+        
+
+main1()
+print('END')
+
