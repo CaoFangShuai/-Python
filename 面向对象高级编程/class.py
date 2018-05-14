@@ -84,3 +84,9 @@ else:
         else:
             print('Students:', Student2.count)
             print('测试通过!')
+class A(object):
+    def set_age(self,age):
+        self.age=age
+        return age
+S=A()
+print(S.set_age(20))

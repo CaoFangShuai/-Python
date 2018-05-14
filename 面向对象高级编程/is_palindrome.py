@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+# @Author: Administrator
+# @Date:   2018-04-17 10:40:58
+# @Last Modified by:   Administrator
+# @Last Modified time: 2018-04-25 13:04:07
+# -*- coding: utf-8 -*-
 #回数是指从左向右读和从右向左读都是一样的数，例如12321，909。请利用filter()筛选出回数：
 
 
