@@ -44,7 +44,6 @@ def pages_from_duitang(label):
         page=get_page(u)
         
         pages.append(page)
-        
     return pages 
     
 
@@ -62,8 +61,8 @@ def findal_in_page(page,startpart,endstart):
         string=page[start:end]
 
         all_strings.append(string)
-        
-        return all_strings
+        print(all_strings)
+    return all_strings
 
 
         
