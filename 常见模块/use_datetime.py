@@ -50,3 +50,14 @@ print(dt)
 # 拿到UTC时间，并强制设置时区为UTC+0:00:
 utc_dt=datetime.utcnow().replace(tzinfo=timezone.utc)
 print(utc_dt)
+
+
+
+
+# 假设你获取了用户输入的日期和时间如2015-1-21 9:01:30，
+# 以及一个时区信息如UTC+5:00，均是str，请编写一个函数将其转换为timestamp：
+import re
+from  datetime import datetime,timezone,timedelta
+
+use_dt=datetime.strptime("2015-1-21 9:01:30",'%Y-%m-%d %H:%M:%S')   
+print(use_dt)
